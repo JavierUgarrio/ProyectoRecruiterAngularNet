@@ -1,0 +1,113 @@
+<div class="container">
+  <h3>Alta Cliente</h3>
+  <form [formGroup]="altaForm" (ngSubmit)="Alta()">
+    <div class="form-group row">
+      <label form="Nombre" class="col-sm-2 col-form-label">Nombre:</label>
+      <div class="col-sm-10">
+        <input id="Nombre" type="text" class="form-control" placeholder="Nombre" formControlName="nombre" [ngClass]="{'is-invalid':enviado && f.nombre.errors }" />
+        <div *ngIf="enviado && f.nombre.errors" class="invalid-feedback">
+          <div *ngIf="f.nombre.errors.requiered" class="invalid-feedback">Nombre es obligatorio</div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="form-group row">
+      <label form="Apellidos" class="col-sm-2 col-form-label">Apellidos:</label>
+      <div class="col-sm-10">
+        <input id="Apellidos" type="text" class="form-control" placeholder="Apellidos" formControlName="apellidos" [ngClass]="{'is-invalid':enviado && f.apellidos.errors }" />
+        <div *ngIf="enviado && f.apellidos.errors" class="invalid-feedback">
+          <div *ngIf="f.apellidos.errors.requiered" class="invalid-feedback">Apellidos es obligatorio</div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="form-group row">
+      <label form="Telefono" class="col-sm-2 col-form-label">Telefono:</label>
+      <div class="col-sm-10">
+        <input id="Telefono" type="number" class="form-control" placeholder="Telefono" formControlName="telefono" [ngClass]="{'is-invalid':enviado && f.telefono.errors }" />
+        <div *ngIf="enviado && f.telefono.errors" class="invalid-feedback">
+          <div *ngIf="f.telefono.errors.requiered" class="invalid-feedback">Telefono es obligatorio</div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="form-group row">
+      <label form="Email" class="col-sm-2 col-form-label">Email:</label>
+      <div class="col-sm-10">
+        <input id="Email" type="email" class="form-control" placeholder="Email" formControlName="email" [ngClass]="{'is-invalid':enviado && f.email.errors }" />
+        <div *ngIf="enviado && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.requiered" class="invalid-feedback">Email es obligatorio</div>
+          <div *ngIf="f.email.errors.email" class="invalid-feedback">Formato del Email es incorrecto </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="form-group row">
+      <label form="Password" class="col-sm-2 col-form-label">Contraseña:</label>
+      <div class="col-sm-10">
+        <input id="Password" type="number" class="form-control" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid':enviado && f.password.errors }" />
+        <div *ngIf="enviado && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.requiered" class="invalid-feedback">Password es obligatorio</div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div>
+      <button class=" btn btn-primary" type="submit">Guardar</button>
+    </div>
+    <br />
+
+  </form>
+</div>
+<!--
+  Formulario Basico
+  <div class="form-group row">
+    <label for="Nombre" class="col-sm-2 col-form-label"> Nombre</label>
+    <div class="col-sm-10">
+      <input id="Nombre" class="form-control" placeholder="Nombre"  />
+    </div>
+  </div>
+  <br />
+
+  <div class="form-group row">
+    <label for="Apellidos" class="col-sm-2 col-form-label"> Apellidos</label>
+    <div class="col-sm-10">
+      <input id="Apellidos" class="form-control" placeholder="Apellidos" />
+    </div>
+  </div>
+  <br />
+
+  <div class="form-group row">
+    <label for="Telefono" class="col-sm-2 col-form-label"> Telefono</label>
+    <div class="col-sm-10">
+      <input id="Telefono" class="form-control" placeholder="Telefono" />
+    </div>
+  </div>
+  <br />
+
+  <div class="form-group row">
+    <label for="Email" class="col-sm-2 col-form-label"> Email</label>
+    <div class="col-sm-10">
+      <input id="Email" class="form-control" placeholder="Email"/>
+    </div>
+  </div>
+  <br />
+
+  <div class="form-group row">
+    <label for="Password" class="col-sm-2 col-form-label"> Contraseña</label>
+    <div class="col-sm-10">
+      <input id="Password" class="form-control" placeholder="Password"  />
+    </div>
+  </div>
+  <br />
+
+  <div>
+    <button class=" btn btn-primary" (click)="Alta()">Guardar</button>
+  </div>
+  <br />
+</div>-->

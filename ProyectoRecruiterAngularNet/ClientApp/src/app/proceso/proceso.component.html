@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th><strong>Id</strong></th>
+      <th><strong>Nombre</strong></th>
+      <th><strong>Descripcion</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pro of listaProcesos">
+      <td>{{pro.idProceso}}</td>
+
+      <td class="text-primary">
+        <strong>{{pro.nombre}}</strong>
+      </td>
+
+      <td class="text-success">
+        <strong>{{pro.descripcion}}</strong>
+      </td>
+    </tr>
+  </tbody>
+</table>
